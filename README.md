@@ -1,2 +1,2 @@
 # firstproject
-aprend+i a borrar
+aprendí a borrar
