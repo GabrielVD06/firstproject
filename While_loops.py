@@ -18,4 +18,11 @@ if val == 2:
         print(True)
 else: print(False)
 
+n = int(input("Valor del conteo: "))
+x = ""
+y = 1
+while y < n+1:
+    x += str(y)
+    y += 1
+print(x)
 
