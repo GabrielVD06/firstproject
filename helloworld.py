@@ -1,3 +1,4 @@
-var = 0
-first_list = ['ford', 'chevrolet', 'dodge']
-print(first_list)
+def palindromo ("word": str)->bool:
+    check = word.replace(" ","")
+    lista = list.check
+    value = len.lista
