@@ -4,8 +4,8 @@ while value < 10 :
     value += 1
     if value == 2:
         continue
-
 print (value)
+
 
 num = int(input("Digite un valor: "))
 cont = num
@@ -17,6 +17,7 @@ while cont > 0 :
 if val == 2: 
         print(True)
 else: print(False)
+
 
 n = int(input("Valor del conteo: "))
 x = ""
