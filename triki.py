@@ -6,9 +6,9 @@ def checkPos(check: list, fila: int, columna: int) -> bool :
         base = True
     return(base)
 
-def winner(rev: list, fila: int, columna: int) -> bool :
+def winner(rev: list) -> bool :
     result = False
-    if rev[fila][columna] == matrix[0][0,3] :
+    if str(rev[0][2]) == "[X]" :
         result = True
     return(result)
 
@@ -23,22 +23,17 @@ for i in range(rows):
         row.append("[-]")   
     matrix.append(row)  
 
-print("triki matrix")
 
-for i in range(rows):
-    for j in range(col):
-        print(matrix[i][j], end=" ")
-    print()
 fila = 0
 columna = 0
 count = 0
 user = 1
-while count < 9 and winner(matrix, fila, columna) == True:
-    for i in range(rows):   
-        row = []
-        for j in range(col):
-            row.append("[-]")   
-        matrix.append(row)
+while count < 9 and winner(matrix) == False:
+    print("triki matrix")
+    for x in range(rows):
+        for y in range(col):
+            print(matrix[x][y], end=" ")
+        print()
 
     if user == 1:
         playerName = "Player 1"
@@ -81,13 +76,6 @@ while count < 9 and winner(matrix, fila, columna) == True:
     elif user == 2:
         matrix[fila][columna] = "[O]"
         user = 1
-            
-
-    print("triki matrix")
-    for x in range(rows):
-        for y in range(col):
-            print(matrix[x][y], end=" ")
-        print()
     count += 1
 
     
