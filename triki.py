@@ -24,7 +24,9 @@ fila = 0
 columna = 0
 count = 0
 user = 1
-while count < 9 :
+comprove = False
+
+while count < 9 and comprove == False:
     print("triki matrix")
     for x in range(rows):
         for y in range(col):
@@ -77,14 +79,25 @@ while count < 9 :
         a = matrix[i][0]
         b = matrix[i][1]
         c = matrix[i][2]
-        if a == b and a == c:
-            break
+        if (str(a) == "[X]" or str(a) == "[O]") and a == b and a == c:
+            comprove = True
     for i in range(rows):   
-        x = matrix[0][i]
-        y = matrix[1][i]
-        z = matrix[2][i]
-        if a == b and a == c:
-            break
+        a = matrix[0][i]
+        b = matrix[1][i]
+        c = matrix[2][i]
+        if (str(a) == "[X]" or str(a) == "[O]") and a == b and a == c:
+            comprove = True
+    val0 = matrix[0][0]
+    val1 = matrix[0][2]
+    val2 = matrix[1][1]
+    val3 = matrix[2][0]
+    val4 = matrix[2][2]
+    
+    if (str(val0) == "[X]" or str(val0) == "[O]") and val0 == val2 and val0 == val4:
+        comprove = True
+    if (str(val1) == "[X]" or str(val1) == "[O]") and val1 == val2 and val1 == val3:
+        comprove = True
+
 
 print("triki matrix")
 for x in range(rows):
