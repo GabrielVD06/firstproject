@@ -6,11 +6,7 @@ def checkPos(check: list, fila: int, columna: int) -> bool :
         base = True
     return(base)
 
-def winner(rev: list) -> bool :
-    result = False
-    if str(rev[0][2]) == "[X]" :
-        result = True
-    return(result)
+
 
 rows = 3
 col = 3
@@ -28,7 +24,7 @@ fila = 0
 columna = 0
 count = 0
 user = 1
-while count < 9 and winner(matrix) == False:
+while count < 9 :
     print("triki matrix")
     for x in range(rows):
         for y in range(col):
@@ -71,11 +67,28 @@ while count < 9 and winner(matrix) == False:
     
     os.system('cls')
     if user == 1:
-        matrix[fila][columna] = "[x]"
+        matrix[fila][columna] = "[X]"
         user = 2
     elif user == 2:
         matrix[fila][columna] = "[O]"
         user = 1
     count += 1
+    for i in range(rows):   
+        a = matrix[i][0]
+        b = matrix[i][1]
+        c = matrix[i][2]
+        if a == b and a == c:
+            break
+    for i in range(rows):   
+        x = matrix[0][i]
+        y = matrix[1][i]
+        z = matrix[2][i]
+        if a == b and a == c:
+            break
 
-    
+print("triki matrix")
+for x in range(rows):
+    for y in range(col):
+        print(matrix[x][y], end=" ")
+    print()
+print(playerName + " won the game")
