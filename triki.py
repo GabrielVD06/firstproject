@@ -104,4 +104,7 @@ for x in range(rows):
     for y in range(col):
         print(matrix[x][y], end=" ")
     print()
-print(playerName + " won the game")
+if comprove == True :
+    print(playerName + " won the game")
+else :
+    print("Draw")
